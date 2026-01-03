@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+      background-image: url();
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+  display:flex ;
+ justify-content: center;
+ overflow-x: hidden;
+ align-items: center;
+  height: 100%;
+  width: 100%;
+padding: 0;
+margin: 0;
+}
+
+
+.container {
+  width:50%;
+  height: 200vh;
+   display: flex;
+  
+
+  
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.952);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://i.pinimg.com/1200x/e1/24/e4/e124e49c02fee3eccf588b07a5f8b91a.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  transform: scale(1.2); /* avoids edge blur cut */
+  z-index:-1;
+  
+}
+
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #004164
+  
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.562);
+
+}
+#appointmentForm{
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+
+
+}
+.divproperty{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  text-align: center;
+  padding: 8px;
+  width: 100%;
+
+
+
+
+}
+.divproperty > label{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.637);
+  font-size: 15px
+}
+.divproperty > input,.divproperty >select
+ {
+  width: 100%;
+  height: 35px;
+  border-radius: 8px ;
+  outline: none;
+  border: none;
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  text-align: center;
+}
+
+
+
+button {
+  margin-left: 15px; 
+  width: 100%;
+  padding: 6px;
+  background: rgb(1, 83, 128);
+  color: white;
+  border: 1px solid rgb(1, 83, 183);
+  font-size: 16px;
+  margin-top: 4vh;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background: #023e8a;
+}
+
+#message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+.container{
+  width: 100%;
+
+}
+#appointmentForm{
+  width: 100%;
+}
+}
+/* Doctor Card */
+.doctor-card {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Doctor Image */
+.doctor-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #4CAF50;
+  animation: float 3s ease-in-out infinite, pulse 2s infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Pulse Glow Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

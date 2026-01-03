@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Appointment Booking</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({
+        publicKey: "Zd9mMrv1o9apOpNUW", // your public key
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🏥 Medical Appointment Booking</h1>
+    <!-- Doctor Profile -->
+<div class="doctor-card">
+  <img 
+    src="https://i.postimg.cc/3J7r7QwQ/doctor.png" 
+    alt="Doctor"
+    class="doctor-img"
+  >
+  <h3>Dr. Sonam Bisen</h3>
+  <p>Senior Cardiologist</p>
+</div>
+
+
+    <form id="appointmentForm">
+
+  <div class="hero-section1-main">
+    <div class="hero-section1-left">
+
+          <div class="divproperty">
+        <label>Patient Name</label>
+        <input type="text" id="name" name="patient_name" placeholder="Enter your name">
+      </div>
+
+      <div class="divproperty">
+        <label>Email</label>
+        <input type="email" id="email" name="patient_email" placeholder="Enter your email">
+      </div>
+
+      <div class="divproperty">
+        <label>Gender</label>
+        <select id="gender" name="gender">
+          <option value="">Select gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+    
+    </div>
+
+    <div class="hero-section1-right">
+        <div class="divproperty">
+        <label>Doctor</label>
+        <select id="doctor" name="doctor">
+          <option value="">Select Doctor</option>
+          <option>Dr. Sonam Bisen (Cardiologist)</option>
+          <option>Dr. Varsha (Dentist)</option>
+          <option>Dr. Manisha (Dermatologist)</option>
+        </select>
+      </div>
+
+      <div class="divproperty">
+        <label>Date</label>
+        <input type="date" id="date" name="appointment_date">
+      </div>
+
+      <div class="divproperty">
+        <label>Time</label>
+        <input type="time" id="time" name="appointment_time">
+      </div>
+
+    </div>
+  </div>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
