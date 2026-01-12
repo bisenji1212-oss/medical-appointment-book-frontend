@@ -1,3 +1,4 @@
+
 document.getElementById("appointmentForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -29,4 +30,34 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
       alert("❌ Email sending failed");
     }
   );
+});
+// Signup
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
+
+  localStorage.setItem("userEmail", email);
+  localStorage.setItem("userPassword", password);
+
+  alert("Signup successful! Please login.");
+});
+
+// Login
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  const storedEmail = localStorage.getItem("userEmail");
+  const storedPassword = localStorage.getItem("userPassword");
+
+  if (email === storedEmail && password === storedPassword) {
+    alert("Login successful!");
+    window.location.href = "index.html"; // medical page
+  } else {
+    alert("Invalid email or password");
+  }
 });
