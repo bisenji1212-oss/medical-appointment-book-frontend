@@ -194,7 +194,7 @@ appointmentForm{
 
 .title .top{
   display: block;
-  font-size: 28px;
+  font-size: 16px;
   background: linear-gradient(90deg, #0d6efd, #00c6ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -270,4 +270,17 @@ appointmentForm{
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* ===== Date & Time Mobile Fix ===== */
+.form-grid input[type="date"],
+.form-grid input[type="time"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #000;
 }
