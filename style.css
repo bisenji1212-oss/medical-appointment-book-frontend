@@ -11,7 +11,7 @@ body {
   url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3")
   center/cover no-repeat;
 }
-
+ 
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -41,8 +41,7 @@ body {
 
 /* GLASS CARD */
 .glass {
-  backdrop-filter: blur(1=2px);
-  background-image: url('https://plus.unsplash.com/premium_photo-1672759455907-bdaef741cd88?q=80&w=1116&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  backdrop-filter: blur();
   background-position: center;
   background-size: cover;
   width: 50%;
@@ -63,7 +62,7 @@ body {
 .doctor-img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 80%;
   border-color:blue;
   border: 4px solid #00ffcc;
   animation: float 3s infinite ease-in-out;
@@ -152,4 +151,123 @@ appointmentForm{
 }
 #loginForm{
   height: 60vh;
+}
+/* ===== Title Fix for Mobile & PC ===== */
+
+.title{
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 15px 0 20px;
+  color: black;
+}
+
+.title .top{
+  display: block;
+  font-size: 28px;   /* PC */
+}
+
+.title .bottom{
+  display: block;
+  font-size: 26px;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .title .top{
+    font-size: 22px;
+  }
+
+  .title .bottom{
+    font-size: 22px;
+  }
+}
+/* ===== Attractive Title Animation ===== */
+
+.title{
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 15px 0 20px;
+  animation: fadeSlide 1s ease forwards;
+}
+
+.title .top{
+  display: block;
+  font-size: 28px;
+  background: linear-gradient(90deg, #0d6efd, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title .bottom{
+  display: block;
+  font-size: 26px;
+  color: #222;
+  animation: pop 0.8s ease forwards;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .title .top{
+    font-size: 22px;
+  }
+  .title .bottom{
+    font-size: 22px;
+  }
+}
+
+/* KEYFRAMES */
+@keyframes fadeSlide{
+  from{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop{
+  0%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ===== Contact Details Style ===== */
+
+.contact-info{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  animation: fadeIn 1s ease;
+}
+
+.contact-info p{
+  margin: 4px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .contact-info{
+    font-size: 13px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

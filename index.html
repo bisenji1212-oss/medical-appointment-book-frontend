@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <title>Medical Appointment Booking</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <link rel="stylesheet" href="style.css">
 
   <!-- EmailJS -->
@@ -29,13 +32,18 @@
 <section id="home" class="page active">
   <div class="container glass">
 
-    <h1 id="medical">Medical Appointment Booking</h1>
+   <!-- <h1 id="medical">Medical Appointment Booking</h1> -->
+    <h1 class="title">
+  <span class="top">Medical Appointment</span>
+  <span class="bottom">Booking</span>
+</h1>
 
-    <!-- Doctor -->
+
+    <!-- Doctor --> 
     <div class="doctor-card">
       <img class="doctor-img"
         src="https://plus.unsplash.com/premium_photo-1661580574627-9211124e5c3f">
-      <h3>Dr. Sonam Bisen</h3>
+      <h3>Dr. John </h3>
       <p>Senior Cardiologist</p>
     </div>
 
@@ -68,7 +76,9 @@
       <input type="date" name="appointment_date" required>
       <input type="time" name="appointment_time" required>
 
-      <button class="primary-btn">Book Appointment</button>
+      <button class="primary-btn">Book Appointment</button><div class="contact-bar">
+  
+
     </form>
   </div>
 </section>
