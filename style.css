@@ -16,16 +16,15 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
+  color:brown;
 }
 
 .navbar button {
   margin-left: 10px;
-  padding: 8px 15px;
+  padding:10px 15px;
   border-radius: 20px;
-  border: none;
+  border: #000;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -51,7 +50,7 @@ body {
   border-radius: 20px;
   width: 100%;
   
-  color: #fff;
+  color:white;
 }
 
 /* DOCTOR */
@@ -67,6 +66,13 @@ body {
   border: 4px solid #00ffcc;
   animation: float 3s infinite ease-in-out;
 }
+.logo{
+  text-align: center;
+  height:70px;
+  width: 400px;
+
+}
+
 
 /* FORM */
 .form-grid {
@@ -152,7 +158,7 @@ appointmentForm{
 #loginForm{
   height: 60vh;
 }
-/* ===== Title Fix for Mobile & PC ===== */
+/* Title for Mobile & PC */
 
 .title{
   text-align: center;
@@ -182,7 +188,7 @@ appointmentForm{
     font-size: 22px;
   }
 }
-/* ===== Attractive Title Animation ===== */
+/* Title Animation */
 
 .title{
   text-align: center;
@@ -194,7 +200,7 @@ appointmentForm{
 
 .title .top{
   display: block;
-  font-size: 16px;
+  font-size: 30px;
   background: linear-gradient(90deg, #0d6efd, #00c6ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -239,26 +245,6 @@ appointmentForm{
     transform: scale(1);
   }
 }
-/* ===== Contact Details Style ===== */
-
-.contact-info{
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #333;
-  animation: fadeIn 1s ease;
-}
-
-.contact-info p{
-  margin: 4px 0;
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .contact-info{
-    font-size: 13px;
-  }
-}
 
 /* Animation */
 @keyframes fadeIn{
@@ -271,7 +257,7 @@ appointmentForm{
     transform: translateY(0);
   }
 }
-/* ===== Date & Time Mobile Fix ===== */
+/* - Date & Time Mobile Fix -*/
 .form-grid input[type="date"],
 .form-grid input[type="time"] {
   width: 100%;
@@ -283,4 +269,83 @@ appointmentForm{
   appearance: none;
   background-color: #fff;
   color: #000;
+}
+/* Date & Time  */
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-box label {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.input-box input[type="date"],
+.input-box input[type="time"] {
+  background-color: #f9f9f9;
+  color: #000;
+  border: 2px solid #00ffcc;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.input-box input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 6px rgba(13,110,253,.6);
+}
+/* ===== HERO SECTION ===== */
+
+.hero {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-text {
+  text-align: center;
+}
+
+/* Welcome to Medicare */
+.main-heading {
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.main-heading span {
+  color: #2563eb;
+}
+
+/* Medical Appointment Booking */
+.sub-heading {
+  margin-top: 10px;
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.tagline {
+  margin-top: 12px;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(18px, 3vw, 30px);
+}
+
+.hero-btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
 }

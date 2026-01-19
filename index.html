@@ -20,13 +20,39 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
+
   <h2>🏥 MediCare</h2>
+  <img class="logo"
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Medicarelogo.png/1280px-Medicarelogo.png">
   <div>
     <button onclick="showPage('home')">Home</button>
     <button onclick="showPage('login')">Login</button>
     <button onclick="showPage('signup')">Signup</button>
   </div>
 </nav>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar"></nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="main-heading">
+        Welcome to <span>Medicare</span>
+      </h1>
+
+      <h2 class="sub-heading">
+        Medical Appointment Booking
+      </h2>
+
+      <p class="tagline">
+        Book doctor appointments easily and manage your health online
+    </div>
+  </section>
+
+</body>
 
 <!-- HOME -->
 <section id="home" class="page active">
@@ -73,8 +99,16 @@
         <option>Dr. Varsha</option>
       </select>
 
-      <input type="date" name="appointment_date" required>
-      <input type="time" name="appointment_time" required>
+      <div class="input-box">
+  <label>📅 Select Date</label>
+  <input type="date" name="appointment_date" required>
+</div>
+
+<div class="input-box">
+  <label>⏰ Select Time</label>
+  <input type="time" name="appointment_time" required>
+</div>
+
 
       <button class="primary-btn">Book Appointment</button><div class="contact-bar">
   
